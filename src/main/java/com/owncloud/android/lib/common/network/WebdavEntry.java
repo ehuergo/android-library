@@ -319,7 +319,7 @@ public class WebdavEntry {
             // NC sharees property <nc-sharees>
             prop = propSet.get(EXTENDED_PROPERTY_SHAREES, ncNamespace);
             if (prop != null && prop.getValue() != null) {
-                Collections.addAll(sharees, prop.getValue().toString().split(","));
+                Collections.addAll(sharees, prop.getValue().toString().split(", "));
             }
         } else {
             Log_OC.e("WebdavEntry", "General fuckup, no status for webdav response");
